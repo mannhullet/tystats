@@ -65,7 +65,11 @@ window.onload = function() {
         selector: '#shoes',
         type: 'column',
         settings: {
-            title: 'Skostørrelse'
+            title: 'Skostørrelse',
+            chartArea: {
+                left: 50,
+                right: 20
+            }
         }
     }));
     google.charts.setOnLoadCallback(draw({

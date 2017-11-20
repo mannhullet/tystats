@@ -37,8 +37,7 @@ window.onload = function() {
             title: 'Signeringer',
             chartArea: {
                 left: 50,
-                right: 20,
-                width: '100%'
+                right: 20
             }
         }
     }));
@@ -50,8 +49,7 @@ window.onload = function() {
             title: 'Avstand til arbeidsplass',
             chartArea: {
                 left: 50,
-                right: 20,
-                width: '100%'
+                right: 20
             },
             hAxis: {
                 title: 'Avstand [nm]',

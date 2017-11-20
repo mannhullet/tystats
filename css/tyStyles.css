@@ -73,19 +73,20 @@ nav a:hover {
 
 .chart {
     flex-grow: 1;
-    height: 400px;
     margin: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 @media (min-width: 368px) {
     .chart {
+        height: 400px;
         min-width: 368px;
     }
 }
 
 @media (max-width: 367px) {
     .chart {
+        height: 320px;
         min-width: 300px;
     }
 }

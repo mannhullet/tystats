@@ -91,3 +91,18 @@ nav a:hover {
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
     padding: 1em;
 }
+
+.strike {
+    text-decoration: line-through;
+}
+
+.old-company {
+    text-decoration: line-through;
+    font-size: 80%;
+}
+
+.new-company {
+    font-weight: bold;
+    font-size: 120%;
+    /*color: #1976D2;*/
+}

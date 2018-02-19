@@ -7,7 +7,7 @@ window.onload = function() {
     // Set the callbacks to run when the Google Visualization API is loaded.
     google.charts.setOnLoadCallback(draw({
         sheetID: '1414326963',
-        selector: '#jobs',
+        selector: '#office',
         type: 'pie',
         settings: {
             title: 'Kontorblokk'
@@ -78,6 +78,14 @@ window.onload = function() {
         type: 'pie',
         settings: {
             title: 'Blodtype'
+        }
+    }));
+    google.charts.setOnLoadCallback(draw({
+        sheetID: '996751350',
+        selector: '#jobs',
+        type: 'pie',
+        settings: {
+            title: 'Andel med jobb'
         }
     }));
 };

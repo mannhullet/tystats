@@ -44,20 +44,12 @@ window.onload = function() {
     google.charts.setOnLoadCallback(draw({
         sheetID: '1092151474',
         selector: '#distance',
-        type: 'scatter',
+        type: 'histogram',
         settings: {
             title: 'Avstand til arbeidsplass',
-            chartArea: {
-                left: 50,
-                right: 20
-            },
-            hAxis: {
-                title: 'Avstand [nm]',
-                minValue: 0
-            },
-            vAxis: {
-                title: 'Antall'
-            }
+            legend: {position: 'none'},
+            hAxis: {title: 'Avstand [nm]'},
+            histogram: {hideBucketItems: true}
         }
     }));
     google.charts.setOnLoadCallback(draw({
@@ -109,6 +101,8 @@ function makeChart(options) {
             return new google.visualization.ScatterChart(element);
         case 'bubble':
             return new google.visualization.BubbleChart(element);
+        case 'histogram':
+            return new google.visualization.Histogram(element);
         default:
             throw 'Error in makeChart(): No match for chart type';
     }

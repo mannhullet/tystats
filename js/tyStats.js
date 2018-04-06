@@ -42,14 +42,17 @@ window.onload = function() {
         }
     }));
     google.charts.setOnLoadCallback(draw({
-        sheetID: '1092151474',
-        selector: '#distance',
-        type: 'histogram',
+        sheetID: '1186685843',
+        selector: '#total',
+        type: 'column',
         settings: {
-            title: 'Avstand til arbeidsplass',
-            legend: {position: 'none'},
-            hAxis: {title: 'Avstand [nm]'},
-            histogram: {hideBucketItems: true}
+            title: 'Totalt antall med jobb',
+            chartArea: {
+                left: 50,
+                right: 20
+            },
+            trendlines: {0: {}},
+            hAxis: {maxValue: new Date(2018, 6, 1)}
         }
     }));
     google.charts.setOnLoadCallback(draw({
@@ -78,6 +81,26 @@ window.onload = function() {
         type: 'pie',
         settings: {
             title: 'Andel med jobb'
+        }
+    }));
+    google.charts.setOnLoadCallback(draw({
+        sheetID: '1214703004',
+        selector: '#profile-percentage',
+        type: 'column',
+        settings: {
+            title: 'Andel av hver spesialisering som har jobb',
+            chartArea: {
+                left: 50,
+                right: 20
+            }
+        }
+    }));
+    google.charts.setOnLoadCallback(draw({
+        sheetID: '1941947079',
+        selector: '#industry',
+        type: 'pie',
+        settings: {
+            title: 'Bransjer'
         }
     }));
 };

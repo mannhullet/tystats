@@ -51,8 +51,11 @@ window.onload = function() {
                 left: 50,
                 right: 20
             },
-            trendlines: {0: {}},
-            hAxis: {maxValue: new Date(2018, 6, 1)}
+            trendlines: {0: {
+                type: 'exponential'
+            }},
+            hAxis: {maxValue: new Date(2018, 6, 1)},
+            vAxis: {maxValue: 80}
         }
     }));
     google.charts.setOnLoadCallback(draw({

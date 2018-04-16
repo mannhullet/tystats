@@ -95,7 +95,8 @@ window.onload = function() {
             chartArea: {
                 left: 50,
                 right: 20
-            }
+            },
+            vAxis: {title: 'Prosent', titleTextStyle: {italic: false}}
         }
     }));
     google.charts.setOnLoadCallback(draw({

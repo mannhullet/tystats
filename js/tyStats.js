@@ -1,6 +1,6 @@
 // Load the Visualization API and the piechart package.
 google.charts.load('current', {
-    'packages': ['corechart']
+    'packages': ['corechart', 'map']
 });
 
 window.onload = function() {
@@ -107,6 +107,22 @@ window.onload = function() {
             title: 'Bransjer'
         }
     }));
+    google.charts.setOnLoadCallback(draw({
+        sheetID: '1376247020',
+        selector: '#map',
+        type: 'map',
+        settings: {
+            showTooltip: true,
+            showInfoWindow: true,
+            mapType: 'normal',
+            icons: {
+                default: {
+                    normal: 'https://maps.google.com/mapfiles/ms/micons/red-dot.png',
+                    selected: 'https://maps.google.com/mapfiles/ms/micons/blue-dot.png'
+                }
+            }
+        }
+    }));
 };
 
 /**
@@ -130,6 +146,10 @@ function makeChart(options) {
             return new google.visualization.BubbleChart(element);
         case 'histogram':
             return new google.visualization.Histogram(element);
+        case 'geoChart':
+            return new google.visualization.GeoChart(element);
+        case 'map':
+            return new google.visualization.Map(element);
         default:
             throw 'Error in makeChart(): No match for chart type';
     }

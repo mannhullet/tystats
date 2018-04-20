@@ -110,3 +110,7 @@ nav a:hover {
     font-size: 120%;
     /*color: #1976D2;*/
 }
+
+.map {
+    height: 40em;
+}
